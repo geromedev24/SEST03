@@ -63,4 +63,12 @@ git add [destination_file]
 git commit -m "[commit_message]"
 ```
 
+4. Show commit history
 
+```bash
+git log
+```
+
+```bash
+git log --oneline
+```
