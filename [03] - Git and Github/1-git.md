@@ -91,7 +91,7 @@ git revert --no-edit [problematic-commit-hash]
 git reset [second-to-the-last-commit-hash]
 ```
 
-# Branching
+## Branching
 
 - git init : Think of this as planting the seed.
 
