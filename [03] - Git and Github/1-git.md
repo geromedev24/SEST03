@@ -38,7 +38,6 @@ git init
 - A : Added
 - M : Modified
 
-
 ## Git Three Stage Architecture
 
 1. How to check the status of all files and folders.
@@ -51,7 +50,7 @@ git status
 
 ```bash
 # Add all the modified files
-git add . 
+git add .
 
 # Add a specific file
 git add [destination_file]
@@ -118,3 +117,18 @@ git branch [name-of-the-branch]
 git switch [name-of-the-branch]
 ```
 
+## Merging
+
+1. Merging branches
+
+- Note You should not be in the branch that you want to delete.
+
+```bash
+git merge [name-of-the-branch]
+```
+
+2. Delete unused branches.
+
+```bash
+git branch -d [name-of-the-branch]
+```
