@@ -1,0 +1,143 @@
+/* Universal Selector */
+* {
+  font-family: Tahoma, sans-serif;
+}
+
+/* Element selector */
+span {
+  background-color: #98c1bc;
+  color: #f4f1bb;
+}
+
+/* ID Selector */
+#secondary-heading {
+  text-align: center;
+}
+
+/* Class Selector */
+.paragraph {
+  background-color: #fe7f2d;
+  color: #233d4d;
+}
+
+/* AND */
+/* Combine multiple conditions together. */
+p.paragraph.first {
+  font-size: 20px;
+}
+
+/* Grouping Selector (OR) */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Descendant Selector */
+ul li {
+  background-color: #e07a5f;
+  color: #f4f1de;
+}
+
+/* Still works even if not direct descendant but span format applies as element selector. */
+ul span {
+  font-style: italic;
+}
+
+/* Only Direct Child/Descendant (>) */
+ul > li {
+  font-weight: bold;
+}
+
+ul > span {
+  font-weight: bold;
+  /* This doesn't work as span is not a direct child/descendant */
+}
+
+/* Sibling Selector */
+/* Next sibling (~)*/
+li.second ~ li {
+  text-align: center;
+}
+
+/* Direct Sibling Selector (+)*/
+li.second + li {
+  text-decoration: line-through red dashed 2px;
+}
+
+/* Pseudo Classes */
+p:first-child {
+  text-decoration: overline red 4px;
+}
+
+p:last-child {
+  text-decoration: underline red 4px;
+}
+
+p:nth-child(2) {
+  text-decoration: line-through purple 4px;
+}
+
+p:nth-child(2n) {
+  background-color: #faae7b;
+}
+
+p:not(.middle) {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Modify the special state of an element */
+
+input:focus {
+  color: #ebebd3;
+  background-color: #083d77;
+}
+
+input:required {
+  background-color: #d62828;
+  color: #003049;
+}
+
+button:hover {
+  background-color: #0cce6b;
+  zoom: 2;
+}
+
+button:active {
+  background-color: #ffd166;
+}
+
+a:link {
+  color: #065a14;
+  text-decoration-line: overline;
+}
+
+a:visited {
+  color: #a77bfa;
+}
+
+/* Attribute Selector */
+a[target="_blank"] {
+  text-decoration: none;
+}
+
+/* Pseudo Element */
+p.quote::first-letter {
+  color: red;
+  font-size: 26px;
+}
+
+p.quote::before {
+  content: "(Before content)";
+  font-style: italic;
+  color: #98c1bc;
+}
+
+p.quote::after {
+  content: "(After content)";
+  font-style: italic;
+  color: #22097c;
+}
+
+/* Pseudo Class (:) */
+/* Pseudo Element (::) */
