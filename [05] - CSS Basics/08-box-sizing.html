@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Sizing</title>
+    <style>
+      .box {
+        background-color: #ead7c3;
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+        padding: 10px;
+        border: solid 8px #f4d35e;
+      }
+
+      .box1 {
+        /* Total Width: sum of border&padding left and right, and width */
+        /* Total Width: 136px */
+        box-sizing: content-box;
+        /* default */
+      }
+
+      .box2 {
+        /* Total Width: maintains the width value specified which is 100 */
+        /* Total Border + Total Padding = 16 + 20 = 36 */
+        /* 100 - 36 = 64 adjusted width*/
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Box Sizing</h1>
+    <div class="box box1">Content</div>
+    <div class="box box2">Border Box</div>
+  </body>
+</html>

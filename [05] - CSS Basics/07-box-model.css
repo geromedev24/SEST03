@@ -1,0 +1,73 @@
+.box {
+  background-color: #45caff;
+  height: 100px;
+  width: 300px;
+  color: #0d3b66;
+  font-weight: 600;
+  box-shadow: 5px 5px 8px 3px #ff1b6b;
+  /* h-offset: positive value moves shadow to the right, negative value leans towards the left */
+  /* v-offset:  positive (towards below), negative (upwards)*/
+  /* blur: the higher value the more blurred */
+  /* spread: the higher value the higher spread (optional) */
+  /* color of the shadow */
+  /* inset (optional) put the shadow inside the box */
+
+  /* Border */
+  border-style: solid dashed dotted double;
+  border-width: 5px 10px 12px 14px;
+  border-color: #00f59b #b5c6e0 #ff930f #fff95b;
+
+  border: solid 5px #0d3b66;
+}
+
+/* Padding (inner spacing) - add a space inside a box */
+.box1 {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+}
+
+/* Padding Shorthand */
+.box2 {
+  /* one value - all sides */
+  padding: 10px;
+  /* two values - top&bottom, left&right */
+  padding: 10px 20px;
+  /* three values - top, left&right, bottom */
+  padding: 10px 20px 30px;
+  /* four values - top, right, bottom, left */
+  padding: 10px 20px 30px 40px;
+}
+
+/* Margin - space outside the box */
+.box3 {
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  margin-left: 40px;
+}
+
+/* Margin Shorthand */
+.box4 {
+  /* one value - all sides */
+  margin: 10px;
+  /* two values - top&bottom, left&right */
+  margin: 10px 20px;
+  /* three values - top, left&right, bottom */
+  margin: 10px 20px 30px;
+  /* four values - top, right, bottom, left */
+  margin: 10px 20px 30px 40px;
+}
+
+.circle {
+  /* total width: 10 + 100 + 10 = 120 px */
+  /* radius: 120 / 2 = 60 px */
+  background-color: #ff7d00;
+  width: 100px;
+  height: 100px;
+  color: #ffecd1;
+  border: solid 10px #001524;
+  border-radius: 60px;
+  text-align: center;
+}
