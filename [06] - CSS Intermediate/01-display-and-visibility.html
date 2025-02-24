@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display and Visibility</title>
+    <style>
+      /* block-level: entire line. */
+      /* height and width works! = block */
+      #block-level {
+        background-color: #0d3b66;
+        color: #faf0ca;
+        /* display: block;  Default */
+        display: inline;
+        height: 200px;
+        width: 200px;
+      }
+
+      /* inline-level: take the space it needs. */
+      /* height and width does not apply = inline */
+      #inline-level {
+        background-color: #fe7f2d;
+        color: #ebf5df;
+        /* display: inline; Default */
+        display: block;
+        width: 200px;
+        height: 200px;
+      }
+
+      #inline-block {
+        background-color: #0cce6b;
+        color: #363537;
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+      }
+
+      /* This will not display/render the element */
+      #none {
+        color: #8000ff;
+        background-color: #00ffff;
+        display: none;
+      }
+
+      #hidden {
+        background-color: #2e4057;
+        color: #f6d8ae;
+        width: 200px;
+        height: 100px;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Display and Visibility</h1>
+    <div id="block-level">
+      This is a block level element changed to inline-level element.
+    </div>
+    <div id="block-level">
+      This is a block level element changed to inline-level element.
+    </div>
+    <span id="inline-level"
+      >This is an inline-level element changed to block level element.</span
+    >
+    <span
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
+      cupiditate.</span
+    >
+    <!-- This would allow width and height to apply but still works like an in-line element. -->
+    <span id="inline-block"
+      >This is an inline-level element changed to inline-block level.</span
+    >
+    <span
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse accusamus
+      consequuntur maiores quaerat incidunt illo vel at exercitationem. Hic,
+      aspernatur.</span
+    >
+    <p id="none">This element will not be displayed.</p>
+    <p id="hidden">This element will be hidden.</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, fugit
+      reprehenderit corrupti distinctio earum a. Enim harum neque non iure!
+    </p>
+  </body>
+</html>
