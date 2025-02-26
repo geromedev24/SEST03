@@ -1,0 +1,77 @@
+body {
+  background-color: #011627;
+  color: #fdfffc;
+}
+
+.gridItem {
+  background-color: #2ec4bc;
+  border: 4px solid #e71d36;
+  padding: 10px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.gridContainer {
+  border: 4px solid #ff9f1c;
+
+  display: grid;
+
+  /* Using px - absolute unit of measure */
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px 200px;
+
+  /* Using auto - adjust the width and heigh based on the content */
+  grid-template-columns: auto auto auto auto;
+
+  /* Using percentage : for even number of columns and rows*/
+  grid-template-columns: 25% 25% 25% 25%;
+
+  /* Using fr - fractional units */
+  grid-template-columns: 1fr 1fr 1fr;
+
+  /* DRY - Don't Repeat Yourself */
+  /* grid-template-columns: repeat(number_of_times, unit_of_measurement); */
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+  /* Column and Row Gap */
+  /* column-gap: 10px; */
+  /* row-gap: 10px; */
+  /* gap: 10px; */
+
+  grid-template-areas:
+    "header header header header header header"
+    "sidebar sidebar main main main main"
+    "sidebar sidebar main main main main"
+    "sidebar sidebar main main main main"
+    "sidebar sidebar main main main main"
+    "footer footer footer footer footer footer";
+}
+
+.gridItem1 {
+  /* grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 7;*/
+  grid-area: header;
+}
+
+.gridItem2 {
+  /* grid-row: [row-start] / [row-end] */
+  /* grid-row: 2 / 6; */
+  /* grid-column: [column-start] / [column-end]; */
+  /* grid-column: 1 / 3; */
+  grid-area: sidebar;
+}
+
+.gridItem3 {
+  /* grid-row: span 4;
+    grid-column: span 4; */
+  grid-area: main;
+}
+
+.gridItem4 {
+  /* grid-area: [row-start] / [column-start] / [row-end] / [column-end]; */
+  /* grid-area: 6 / 1 / 7 / 7; */
+  grid-area: footer;
+}
