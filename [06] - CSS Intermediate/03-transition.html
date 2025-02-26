@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transitions</title>
+    <style>
+      /* 
+        2 ways to create animation.
+        1. Transition: this requires user interaction to trigger the animation. 
+        2. Animation: this does not require user interaction.
+        */
+
+      #btn {
+        width: 200px;
+        font-size: 2rem;
+        border-radius: 40px;
+        border: 6px solid #5a189a;
+        color: #ffcbf2;
+        background-color: #9d4edd;
+        padding: 4px;
+
+        /* Transition */
+        /* 1000ms = 1s */
+        /* transition-property: border-color, background-color, transform;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+        transition-delay: 200ms; */
+
+        /* Shorthand */
+        /* transition: [property][duration][timing-function][delay]; */
+        /* transition: background-color 500ms 100ms, border-color 500ms 100ms,
+          transform 500ms 100ms; */
+
+        transition: all 500ms 100ms;
+      }
+
+      #btn:hover {
+        background-color: #3c096c;
+        border-color: #3c096c;
+        transform: scale(1.2, 1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Transitions</h1>
+    <button id="btn">Contact</button>
+  </body>
+</html>
