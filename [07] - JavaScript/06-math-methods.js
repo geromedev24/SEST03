@@ -23,3 +23,25 @@ console.log(`Round: ${Math.round(num4)}`);
 // .trunc(): remove the decimal part of a floating-point number.
 let pi = Math.PI;
 console.log(Math.trunc(pi));
+
+// .pow() : raise a number to the power of another number
+const powResult = Math.pow(2, 3);
+console.log("Power:", powResult);
+
+// .sqrt: return the square root of a given number.
+const squareRoot = Math.sqrt(64);
+// console.log("Square Root:", Math.sqrt(64));
+console.log("Square Root:", squareRoot);
+
+// .abs(): returns the absolute value of a number.
+const num5 = -30;
+console.log("Absolute:", Math.abs(num5));
+
+// .max(): return the largest number
+console.log("Max:", Math.max(num1, num2, num3, num4, num5));
+
+// .min(): return the smallest number
+console.log("Min:", Math.min(num1, num2, num3, num4, num5));
+
+// .random(): generate a floating point number between 0 and 1 (excluded)
+console.log("Random Number:", Math.random());
