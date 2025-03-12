@@ -1,22 +1,30 @@
-console.log("Welcome Player! Do you want to play my guessing game?");
-console.log("If so, guess between 1 and 10");
+const numRandom = Math.random() * 10 + 1;
+const secretNumber = Math.floor(numRandom);
 
-const secretNumber = Math.floor(Math.random() * 10) + 1;
-let attempts = 0;
+let attempt = 0;
 let guessedNumber;
+console.log(secretNumber);
+
+let name = prompt(
+  "Welcome to the Guess the Secret Number. Please enter your name:"
+);
 
 do {
-  guessedNumber = parseInt(prompt("Enter your guess:"), 10);
-  attempts++;
+  guessedNumber = parseInt(prompt("Please enter your Number (1 - 10 only)"));
 
-  if (guessedNumber < secretNumber) {
-    console.log("Too low! Try again.");
-  } else if (guessedNumber > secretNumber) {
-    console.log("Too high! Try again.");
+  if (guessedNumber > 0 && guessedNumber <= 10) {
+    attempt++;
+    if (guessedNumber < secretNumber) {
+      console.log(`${guessedNumber} is Too low! Try again ${name}.`);
+    } else if (guessedNumber > secretNumber) {
+      console.log(`${guessedNumber} is Too high! Try again ${name}.`);
+    } else if (guessedNumber == secretNumber) {
+      console.log(
+        `Congratulations ${name}! You have guessed the correct number: ${secretNumber}`
+      );
+      console.log(`It took you ${attempt} attempts`);
+    }
   } else {
-    console.log(
-      `Congratulations! You guessed the correct number: ${secretNumber}`
-    );
-    console.log(`It took you ${attempts} attempts.`);
+    console.log(`Please RETRY ${name}. Enter only numbers between 1 - 10`);
   }
-} while (guessedNumber !== secretNumber);
+} while (guessedNumber != secretNumber);
