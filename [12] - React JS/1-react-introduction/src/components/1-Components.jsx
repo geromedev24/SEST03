@@ -7,6 +7,9 @@ Follows Pascal Naming Convention: OneTwoThree
 
 JSX: JavaScript XML
 
+Library - customizable
+Framework - built-in
+
 */
 
 function Component() {
