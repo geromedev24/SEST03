@@ -1,0 +1,10 @@
+div.book-card {
+  background-color: #fefae0;
+  width: 200px;
+  border: 2px solid #dda15e;
+  color: #6c584c;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 4px;
+  font-family: cursive;
+}
