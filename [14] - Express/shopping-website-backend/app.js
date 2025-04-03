@@ -1,4 +1,7 @@
+// NPM Install Express
 const express = require("express");
+// NPM Install CORS
+const cors = require("cors");
 const products = require("./products");
 const cart = require("./cart");
 const app = express();
@@ -15,6 +18,13 @@ const port = 3000;
 
 // == Middleware ==
 app.use(express.json());
+
+// CORS
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
 
 // Define a route
 // .get(route/URL, callbackFunction (Route Handler))
@@ -66,7 +76,12 @@ app.post("/api/products", (request, response) => {
   products.push(newProduct);
   // 200: OK or Successful.
   // 201: Successfully created.
-  response.status(201).json({ message: "Product added to the product list." });
+  response
+    .status(201)
+    .json({
+      message: "Product added to the product list.",
+      product: newProduct,
+    });
 });
 
 // Update (Route Handler)
@@ -124,12 +139,18 @@ app.post("/api/cart", (req, res) => {
     (productObject) => productObject.id === productId
   );
 
-  if (product) {
-    cart.push(product);
-    res.status(201).json({ message: "Product added to cart." });
-  } else {
+  if (!product) {
     res.status(404).json({ message: "Product not found." });
   }
+
+  const existingCartItem = cart.find((item) => item.id === productId);
+  if (existingCartItem) {
+    existingCartItem.quantity++;
+  } else {
+    cart.push({ ...product, quantity: 1 });
+  }
+
+  res.status(201).json({ message: "Product added to cart successfully!" });
 });
 
 app.get("/api/cart", (req, res) => {
