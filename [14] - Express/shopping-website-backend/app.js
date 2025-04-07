@@ -76,12 +76,10 @@ app.post("/api/products", (request, response) => {
   products.push(newProduct);
   // 200: OK or Successful.
   // 201: Successfully created.
-  response
-    .status(201)
-    .json({
-      message: "Product added to the product list.",
-      product: newProduct,
-    });
+  response.status(201).json({
+    message: "Product added to the product list.",
+    product: newProduct,
+  });
 });
 
 // Update (Route Handler)
@@ -102,7 +100,9 @@ app.put("/api/products/:productId", (request, response) => {
   if (product) {
     product.name = name;
     product.price = price;
-    response.status(200).json({ message: "Product updated successfully!" });
+    response
+      .status(200)
+      .json({ message: "Product updated successfully!", product: product });
   } else {
     response.status(404).json({ message: "Product not found" });
   }
@@ -154,7 +154,7 @@ app.post("/api/cart", (req, res) => {
 });
 
 app.get("/api/cart", (req, res) => {
-  res.status(200).json({ cart: cart });
+  res.status(200).json(cart);
 });
 
 // Removing object from the Cart (Route Handler)
